@@ -3,22 +3,28 @@
 	padding: 0;
 }
 
-html, body{
+html{
+	position: relative;
+	min-height: 100%;
+} 
+body{
 	background-color: rgb(204,0,0);
-	background-size: cover;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+	margin: 0 0 75px;
+}
+
+#wrapper{
+	min-height: 100%;
+	padding: 0 0 55px;
+	position: relative;
 }
 
 h1{
 	font-family: 'Fjalla One', sans-serif;
-	font-size: 58pt;
 	text-align: center;
-	color:red;
 }
-#wrapper{
-	position: relative;
+h2{
+	font-family: 'Fjalla One', sans-serif;
+	text-align: center;
 }
 .constlogo{
 	height: 10vmax;
@@ -26,33 +32,223 @@ h1{
 	margin-top: 20px;
 	/*margin-top: 5%;*/
 }
-/*------------------General----------------*/
-
-.content{
-	background-color:white;
-	border: hidden;
-	border-radius: 10px;
-	box-shadow: 10px 5px 5px black;
-}
-.content p{
-	text-align: center;
-	font-family: 'Fjalla One', sans-serif;
-	font-size: 1.5vmax;
-	color: black;
-	margin:10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
 /*------------------Navbar--------------*/
-#logo{
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    /*header > div#logo {
+        line-height: 70px;
+        position: relative;
+    }*/
+    
+    header > .menuDown {
+        box-shadow: 0 3px 5px rgba(0,0,0,1);
+    }
+    
+    header > .menuUp {
+        box-shadow: none;
+    }
+    
+        /*header > div#logo > h1 {
+            color: white;
+            font-weight: 300;
+            text-transform: lowercase;
+        }*/
+        
+        header > div#logo > div#navToggle {
+            background-color: rgba(0,0,0,.15);
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: 300ms all ease;
+        }
+            
+            header > div#logo > div#navToggle:hover {
+                background-color: rgba(0,0,0,.1);
+            }
+            
+            header > div#logo > div#navToggle > a {
+                color: rgba(255,255,255,.85);
+                display: block;
+                font-size: 0.85em;
+                font-weight: 600;
+                padding: 0 2.5rem;
+                text-decoration: none;
+                transition: 300ms all ease;
+            }
+            
+                header > div#logo > div#navToggle:hover > a {
+                    color: rgba(255,255,255,1);
+                }
+
+    header > nav {
+        background-color: white;
+        display: none;
+        flex: 1;
+        transform: 300ms all ease;
+    }
+    
+        header nav > ul {
+            list-style-type: none;    
+        }
+        
+            header nav > ul > li {
+                border-bottom: 1px dotted rgba(0,0,0,.1);
+                position: relative;
+            }
+            
+                header nav > ul > li:last-of-type {
+                    border-bottom: none;    
+                }
+            
+                header nav > ul > li > a {
+                    display: block;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.85em;
+                    padding: 1.5rem 0;
+                    text-decoration: none;
+                    transition: 250ms all ease;
+                }
+                
+                    header nav > ul > li > a span.toggle {
+                        background-color: rgba(0,0,0,.05);
+                        border-radius: 3rem;
+                        color: rgba(0,0,0,.25);
+                        font-size: 0.75em;
+                        font-weight: 500;
+                        padding: 2px 8px;
+                        text-transform: lowercase;    
+                    }
+                    
+                    header nav > ul > li > a span.caret {
+                        display: none;
+                    }
+                
+                    header > nav > ul > li:hover > a {
+                        color: black;  
+                    }
+                
+            header > nav > ul > li > nav {
+                background-color: white;
+                border-radius: 1.5em;
+                box-shadow: 0 2px 8px rgba(0,0,0,.6);
+                display: none;
+                overflow: hidden;
+                position: absolute;
+                right: 5%;
+                width: 90%;
+                z-index: 100;
+            }
+            
+                header > nav > ul > li > nav > ul > li > a {
+                    color: white;
+                    transition: 300ms all ease;
+                }
+                
+                    header > nav > ul > li > nav > ul > li:hover > a {
+                        background-color: rgba(0,0,0,.6);
+                        color: white;
+                    }
+@media all and (min-width: 600px) {
+    header > div#logo > div#navToggle {
+        display: none;    
+    }
+    
+    header {
+		font-family: 'Fjalla One', sans-serif;
+        background-color: rgb(204,0,0);
+    	border-bottom-style: solid;
+    	border-bottom-width: 3px;
+    	border-bottom-color: white;
+        flex-direction: row;
+        line-height: 70px;
+        /*padding: 0 3rem;*/
+        position: static;
+        text-align: left;
+        width: 100%;
+    }
+    
+        header > div#logo {
+            background-color: transparent;
+            line-height: 90px;
+        }
+    
+            header > div#logo > h1 {
+                color: black;
+            }
+            
+    header > nav {
+        background-color: transparent;
+        display: block;
+    }
+    
+        header > nav > ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;    
+        }
+        
+            header nav > ul > li {
+                border-bottom: none;
+            }
+    
+                header nav > ul > li > a {
+                    padding: 0 1.25rem;
+                }
+                    
+                    header nav > ul > li > a span.toggle {
+                        display: none;    
+                    }
+                    
+                    header nav > ul > li > a span.caret {
+                        border-bottom: 4px solid transparent;
+                        border-top: 4px solid white;
+                        border-right: 4px solid transparent;
+                        border-left: 4px solid transparent;
+                        border-radius: 1px;
+                        content: "";
+                        display: inline-block;
+                        height: 0;
+                        margin: 0 0 0 .25rem;
+                        transition: 250ms all ease;
+                        width: 0;
+                        vertical-align: middle;
+                    }
+                    
+                        header nav > ul > li:hover > a span.caret {
+                            border-top-color: black;
+                            transform: rotate(270deg); 
+                        }
+    
+    header > nav > ul > li:hover > nav {
+        background-color: rgb(51,51,51);
+        border-radius: .25em;
+        box-shadow: 0 2px 8px rgba(0,0,0,.6);
+        display: block;
+        line-height: 3em;
+        right: -50%;
+        width: 196px;
+    }
+}
+
+.logo{
+	float: left;
+	margin-top: 5px;
+	margin-bottom:5px;
+	padding-left: 20px;
+	height: 60px;
+}
+/*#logo{
 	height: 80%;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 1%;
 	float: left;
-	/*margin-top: 5%;*/
+	/*margin-top: 5%;
 }
 #topbar{
 	width: 100%;
@@ -69,7 +265,7 @@ h1{
     font-size: 1.8vmax;
     font-family: 'Fjalla One', sans-serif;
     font-weight: 900;
-    /*text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
+    /*text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     text-align: center;
 }
 #navbar ul {
@@ -109,13 +305,83 @@ padding-right: 1vmax;
     text-decoration: none;
     color: white;
     padding: 8px 8px 8px 8px;
+}*/
+/*------------------General----------------*/
+
+.content{
+	background-color:white;
+	border: hidden;
+	border-radius: 10px;
+	box-shadow: 10px 5px 5px black;
+	overflow: hidden;
+}
+.content p{
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 1.5vmax;
+	color: black;
 }
 /*--------------Home-------------------*/
 #construction{
 	margin: auto;
 	margin-top: 20px;
-	width: 75%;
+	width: 70%;
+	margin-bottom: 55px;
 }
+	#construction > h1{
+		color: black;
+		font-size: 25pt;
+		padding-top: 15px;
+	}
+	#construction > p{
+		float: left;
+		width: 60%;
+		padding-left: 5%;
+		padding-right: 2%;
+		padding-bottom: 5px;
+		line-height: 40pt;
+	}
+
+#twitterfeed{
+	width: 15vmax;
+	height: 400px;
+	float: right;
+	padding: 25px;
+	
+}
+.twitter-timeline{
+	margin: auto;
+	width: 100%;
+	background-color:white;
+}
+/*--------------------Bio--------------------*/
+#bio{
+	margin: auto;
+	margin-top: 20px;
+	width: 70%;
+	margin-bottom: 55px;
+}
+	#bio > h1{
+		color: black;
+		font-size: 25pt;
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
+	#bio > p{
+		font-size: 17pt;
+		font-weight: normal;
+		float: left;
+		width: 60%;
+		padding-left: 5%;
+		padding-right: 2%;
+		padding-bottom: 10px;
+		line-height: 25pt;
+	}
+	#bio > img{
+		margin: 4%;
+		padding-left: 10px;
+		display: block;
+	}
 /*-------------------Schedule----------------*/
 #schedule{
 	margin: auto;
@@ -124,126 +390,171 @@ padding-right: 1vmax;
     font-family: 'Fjalla One', sans-serif;
     font-size: 1.7vmax;
     text-align: left;
-}
-#schedule ul{
-	margin: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	list-style-type: square;
-}
-#schedule li{
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
+	}
+	#schedule ul{
+		margin: 2%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		padding-left: 25px;
+		list-style-type: square;
+	}
+		#schedule li{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+			#schedule li a{
+				color: black;
+				text-decoration: none;
+			}
+				#schedule li a:hover{
+					font-weight: bold;	
+				}
 /*-------------------Media--------------------*/
 #videoplayer{
 	margin: auto;
 	margin-top: 20px;
-	margin-right: 7vmax;
 	width: 65%;
-	float: right;
 	text-align: center;
 }
 .player{
+	display: block;
 	margin: auto;
 	padding: 20px;
 	height: 31.5vmax;
 	width: 56vmax;
-
 	background-color:white;
 	border: hidden;
 	border-radius: 10px;
 	box-shadow: 10px 5px 5px black;
 }
-.audioplayer{
-	float: left;
+#audioplayer{
+	padding: 10px;
+	display: block;
 	background-color:white;
+	width: 60%;
 	border: hidden;
 	border-radius: 25px;
 	box-shadow: 10px 5px 5px black;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin: auto;
+	margin-top: 20px;
 }
-.playeriframe{
-	padding: 20px;
+/*~~~~~~~~~~~~~~~~~~~~Pictures~~~~~~~~~~~~~~~~*/
+#comingSoon{
+	margin: auto;
+	margin-top: 20px;
+	width: 60%;
+	line-height: 40pt;
 }
+	#comingSoon > h1{
+		padding: 15px;
+	}
+	#comingSoon > p{
+		margin: auto;
+		width: 75%;
+	}
+	#comingSoon > img{
+		display: block;
+		margin: auto;
+		/*width: 300px;
+		height: 220px;*/
+		width: 30%;
+		height: 15%;
+		padding-bottom: 25px;
+	}
+/*-------------------Articles-------------------*/
+#articleDiv{
+	margin: auto;
+	width: 65%;
+	margin-top: 20px;
+	margin-bottom: 55px;
+}
+	#articleDiv > p{
+		padding: 25px;
+		line-height: 20pt;
+		font-size: 14pt;
+	}
+	#articleDiv > h2{
+		padding-top: 15px;
+	}
 /*-------------------Contact-------------------*/
 #contactinfo{
-	float: right;
 	margin: auto;
-	margin-right: 10%;
 	margin-top: 20px;
 	width: 70%;
+	text-align: center;
+	line-height: 35pt;
 }
+	#contactinfo > p{
+		width: 50%;
+		font-weight: bold;
+		margin: auto;
+		margin-top: 3%;
+	}
 
-.bclogo{
-	margin-left: 40%;
-	padding-right: 10px;
-	-webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+	ul.numEmail{
+		margin: 2%;
+    	font-family: 'Fjalla One', sans-serif;
+    	font-size: 1.5vmax;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		padding-left: 25px;
+		list-style-type: none;
+	}
+		ul.numEmail li{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+			ul.numEmail li a{
+				color: black;
+				text-decoration: none;
+			}
+				ul.numEmail li a:hover{
+					font-weight: bold;	
+				}
+ul.socialMedia{
+	margin: 2%;
+	list-style-type: none;
 }
-.bclogo:hover{
-	-webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+	ul.socialMedia li{
+		display: inline;
+	}
+.bclogo{
+	width: 60px;
+	height: 60px;
 }
 .fblogo{
 	width: 60px;
 	height: 60px;
-	margin-right: 40%;
-	padding-left: 10px;
-	-webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
 }
-.fblogo:hover{
-	-webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+.twlogo{
+	width: 60px;
+	height: 60px;
 }
-#twitterfeed{
-	width: 15vmax;
-	height: 400px;
-	float: left;
-	margin-top: 20px;
-	margin-left: 10px;
-	position:absolute;
+.instalogo{
+	width: 60px;
+	height: 60px;
 }
-.twitter-timeline{
-	margin: auto;
-	width: 100%;
-	background-color:white;
-	border: hidden;
-	border-radius: 5px;
-	box-shadow: 10px 5px 5px black;
+.utubelogo{
+	width: 60px;
+	height: 60px;
 }
-
 /*~~~~~~~~~~~~~~~~~~~~footer~~~~~~~~~~~~~~~~~~~~~~*/
 footer{
-	position: absolute;
-	font-family: 'Fjalla One', sans-serif;
 	font-size: 11px;
-	bottom: 0;
-	margin-top: 55px;
-	width: 100%;
-}
-footer, .push{
+	bottom: 0px;
 	height: 55px;
+	left: 0px;
+	position: absolute;
+	width: 100%;
+	color: white;
+	font-family: 'Fjalla One', sans-serif;
 }
 footer p{
-	color: rgba(255,255,255,.7);
+	color: white;
 	text-align: center;
 }
 footer ul{
-	color: rgba(255,255,255,.7);
+	color: white;
 	font-family: 'Fjalla One', sans-serif;
 	list-style: none;
 	text-align: center;
@@ -256,24 +567,20 @@ footer ul li{
 	padding: 5px
 }
 footer ul a:link{
-	color: rgba(255,255,255,.7);
-	font-family: 'Fjalla One', sans-serif;
+	color: white;
 	text-decoration: none;
 }
 footer ul a:visited{
-	color: rgba(255,255,255,.7);
-	font-family: 'Fjalla One', sans-serif;
+	color: white;
 	text-decoration: none;
 }
 footer ul a:hover{
-	color: rgba(255,255,255,.7);
-	font-family: 'Fjalla One', sans-serif;
+	color: white;
 	font-weight: 900;
 	text-decoration: none;
 }
 footer ul a:active{
-	color: rgba(255,255,255,.7);
-	font-family: 'Fjalla One', sans-serif;
+	color: white;
 	text-decoration: none;
 }
 #creatorsig p{
@@ -281,5 +588,5 @@ footer ul a:active{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 10px;
-	color: rgba(255,255,255,.5);
+	color: rgba(255,255,255,.9);
 }

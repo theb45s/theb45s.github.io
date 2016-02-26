@@ -3,37 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome!</title>
+	<link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<div class="wrapper">
-		<!--<div id="topbar">
-			<img src="img/logo.svg" id="logo" alt="Logo">
-			<div id="navbar">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="schedule.html">Upcoming Shows</a></li>
-					<li><a href="music.html">Media</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>	
-		</div>-->
-		<img src="img/logo.svg" class="constlogo" alt="Logo">
-		<div id="construction" class="content">
-			<p>Welcome to The B45's official band website. Currently we are under construction, so please bear with us through any technical difficulties we may experience. We'll try to make everything as perfect as possible as soon as we can! Enjoy!</p>
-		</div>
+	<body>
+		<div class="wrapper">
+			<header>
+			    <nav>
+			        <img src="img/logo.svg" class=logo alt="The B45's">
+			        <ul>
+			            <li><a href="index.html">Home</a></li>
+			            <li><a href="bio.html">Bio</a></li>
+			            <li><a href="schedule.html">Shows</a></li>
+			            <li>
+			                <a href="#">Media <span class="toggle">Expand</span><span class="caret"></span></a>
+			                <nav>
+			                    <ul>
+			                        <li><a href="music.html">Music</a></li>
+			                        <li><a href="video.html">Videos</a></li>
+			                        <li><a href="pictures.html">Photos</a></li>
+			                        <li><a href="articles.html">Articles</a></li>
+			                    </ul>
+			                </nav>
+			            </li>
+			            <li><a href="contact.html">Contact</a></li>
+			        </ul>
+			    </nav>
+			</header>
 
-	    <!--<footer>
-	    <div class="wrapper">
-	    <p>The B45's</p>
-	    <ul>
-	    	<li>Phone: 260-515-7429</li>
-	        <li>Email: <a href="mailto:theb45s@gmail.com">theb45s@gmail.com</a></li>
-	    </ul>
-	    <div id="creatorsig"><p>Site created by James Tarr</p></div>
+			<div id="construction" class="content">
+	            <div id="twitterfeed" draggable="true">
+	                <a class="twitter-timeline"  href="https://twitter.com/theb45s" data-widget-id="690802652872118273">Tweets by @theb45s</a>
+	                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	                </script>
+	            </div>
+				<h1>Welcome to The B45's official website!</h1>
+	            <p><br/>We're working hard to make this the #1 best source of info about the band and what we're up to. We are still under construction, and have lots of cool features planned in the future, but for now, feel free to explore and enjoy the site!</p>
+			</div>
+
+			<footer>
+			    <p>The B45's</p>
+			    <ul>
+			        <li>Phone: 260-515-7429</li>
+			        <li>Email: <a href="mailto:theb45s@gmail.com">theb45s@gmail.com</a></li>
+			    </ul>
+			    <div id="creatorsig"><p>Site created by James Tarr</p>
+			    </div>
+			</footer>
 	    </div>
-	    </footer>-->
-    </div>
+	</body>
 </html>
-</body>
