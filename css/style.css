@@ -108,7 +108,7 @@ header {
                     display: block;
                     color: white;
                     font-weight: 700;
-                    font-size: 1.85em;
+                    font-size: 2.5vmax;
                     padding: 1.5rem 0;
                     text-decoration: none;
                     transition: 250ms all ease;
@@ -197,7 +197,7 @@ header {
             }
     
                 header nav > ul > li > a {
-                    padding: 0 1.25rem;
+                    padding: 0 1rem;
                 }
                     
                     header nav > ul > li > a span.toggle {
@@ -369,18 +369,20 @@ padding-right: 1vmax;
 	}
 	#bio > p{
 		font-size: 17pt;
+		margin: auto;
+		padding: 10px;
 		font-weight: normal;
-		float: left;
 		width: 60%;
-		padding-left: 5%;
-		padding-right: 2%;
 		padding-bottom: 10px;
 		line-height: 25pt;
 	}
 	#bio > img{
-		margin: 4%;
-		padding-left: 10px;
+		margin: auto;
+		padding: 10px;
+		padding-bottom: 20px;
 		display: block;
+		height: 25vmax;
+		width: 50vmax;
 	}
 /*-------------------Schedule----------------*/
 #schedule{
@@ -457,8 +459,8 @@ padding-right: 1vmax;
 		margin: auto;
 		/*width: 300px;
 		height: 220px;*/
-		width: 30%;
-		height: 15%;
+		width: 50%;
+		height: 30%;
 		padding-bottom: 25px;
 	}
 /*-------------------Articles-------------------*/
