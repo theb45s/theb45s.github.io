@@ -4,49 +4,59 @@
 	<meta charset="UTF-8">
 	<title>The B45s - Bio</title>
 	<link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/style2.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/d8c482c99b.js"></script>
+	<script src="js/bootstrap.js"></script>
 </head>
-	<body>
+	<body>			
+	<header>
+	    <img src="img/logo.svg" id="logo" alt="The B45's">
+	    <div>
+		    <nav class="navbar navbar-default">
+		    	<div class="container-fluid">
+		    		<div class="navbar-header">
+		    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    				<span class="icon-bar"></span>
+		    				<span class="icon-bar"></span>
+		    				<span class="icon-bar"></span>
+		    			</button>
+		    		</div>
+		    		<div class="collapse navbar-collapse" id="myNavbar">
+		        		<ul class="nav navbar-nav">
+				            <li ><a href="index.html">News</a></li>
+				            <li><a href="bio.html">Bio</a></li>
+				            <li><a href="schedule.html">Shows</a></li>
+				            <li><a href="music.html">Music</a></li>
+				            <li><a href="contact.html">Contact</a></li>
+		        		</ul>
+		        	</div>
+		        </div>
+		    </nav>
+		</div>
+		</header>
 		<div class="wrapper">
-			<header>
-			    <nav>
-			        <img src="img/logo.svg" class=logo alt="The B45's">
-			        <ul>
-			            <li><a href="index.html">Home</a></li>
-			            <li><a href="bio.html">Bio</a></li>
-			            <li><a href="schedule.html">Shows</a></li>
-			            <li>
-			                <a href="#">Media <span class="toggle">Expand</span><span class="caret"></span></a>
-			                <nav>
-			                    <ul>
-			                        <li><a href="music.html">Music</a></li>
-			                        <li><a href="video.html">Videos</a></li>
-			                        <li><a href="pictures.html">Photos</a></li>
-			                        <li><a href="articles.html">Articles</a></li>
-			                    </ul>
-			                </nav>
-			            </li>
-			            <li><a href="contact.html">Contact</a></li>
-			        </ul>
-			    </nav>
-			</header>
-
-			<div id="bio" class="content">
+			<div class="pageContent">
 	            <h1>Who Are The B45's?</h1>
 	            <p>The B45's are a band of adolescents,  from the Fort Wayne, Indiana area, made up of Colin Taylor, Ben Tarr, Kellen Baker, and Sam Clay. They wish to incorporate their 60's Rock n' roll influences with a modern and youthful energy and create original music that resonates and introduces a progressive nostalgia. </p><p>Their vocal harmonies, screeching guitar riffs, and steady canon drums make for a high energy and electrified set of music, easily enjoyed by all ages. </p><p>This band, while still only about a year and a half old, has achieved a lot playing at venues such as The Brass Rail, Foellinger Theatre, and Fort Wayne's Embassy Theatre. Building up a large catalog of original music, The B45's wish to keep expanding their musical possibilities and continue their success.</p>
-	            <img src="img/pano.jpg">
+			<img class = "pic bioPic" src="img/pano.jpg">
 			</div>
-
-			<footer>
-			    <p>The B45's</p>
-			    <ul>
-			        <li>Phone: 260-515-7429</li>
-			        <li>Email: <a href="mailto:thebfortyfives@gmail.com">thebfortyfives@gmail.com</a></li>
-			    </ul>
-			    <div id="creatorsig"><p>Site created by James Tarr</p>
-			    </div>
-			</footer>
 	    </div>
+		<div class="foot">
+			<ul class="footUL">
+			    <li>
+			    	<ul class="iconUL">
+				        <li><a href="https://www.facebook.com/The-B45s-1523953511172276/"><i class="fa fa-facebook fa-2"></i></a></li>
+				        <li><a href="https://twitter.com/theb45s"><i class="fa fa-twitter fa-2"></i></a></li>
+				        <li><a href="https://www.youtube.com/channel/UCTEEgABBTp8cWw2YJCRH0NQ"><i class="fa fa-youtube fa-2"></i></a></li>
+				        <li><a href="mailto:thebfortyfives@gmail.com"><i class="fa fa-envelope-o fa-2"></i></a></li>
+				        <li><a href="https://www.instagram.com/the_b45s/"><i class="fa fa-instagram fa-2"></i></a></li>
+			    	</ul>
+			    </li>
+			    <li><div id="creatorsig"><a href="https://www.linkedin.com/in/james-tarr-34849197">Site created by James Tarr</a></div></li>
+			</ul>
+		</div>
 	</body>
 </html>
