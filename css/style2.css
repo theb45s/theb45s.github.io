@@ -51,6 +51,11 @@ h2{
 	padding-bottom: 25px;
 	width: 400px;
 }
+@media (max-width: 768px){
+	#logo{
+		width: 95%;
+	}
+}
 /*----------Navbar controllers----------*/
 .navbar-default .navbar-toggle{
 	width: 100px;
@@ -178,7 +183,7 @@ nav ul{
 .player{
 	display: block;
 	margin: auto;
-	padding: 20px;
+	padding: 30px 20px 35px 20px;
 }
 .widget_iframe{
 	padding-bottom: 25px;
@@ -188,6 +193,7 @@ nav ul{
 	border: white solid 5px;
 }
 .newsPic{
+	width: 350px;
 	display: block; 
 	float: right;
 	margin: 5px;
@@ -199,11 +205,17 @@ nav ul{
 	margin-bottom: 25px;
 }
 @media (max-width: 768px){
+	.wrapper{
+		width: 100%;
+	}
 	.newsBlock{
 		display: inline;
 		text-align: center;
 	}
 	.newsPic{
+		width: 100%;
+		margin: auto;
+		float: none;
 		clear: both;
 	}
 	.bioPic{
